@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<style type="text/css">
+		#isa-preview-wrapper {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0,0,0,.4);
+		}
+		#close-preivew {
+			position: fixed;
+			top: 10px;
+			right: 20px;
+			font-weight: bolder;
+			font-size: 100px;
+			color: #000;
+		}
+		#close-preivew:hover {
+			color: #777;
+		}
+		#isa-preview {
+			overflow: auto;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		#isa-preview:after {
+			content: " ";
+			display: block;
+		}
+		#isa-preview>article:first-child {
+			margin-top: 40px;
+		}
+		#isa-preview>article {
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 40px;
+			width: 80%;
+			text-align: center;
+		}
+		#isa-preview>article>img {
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="isa-preview-wrapper">
+		<div id="close-preivew">×</div>
+		<div id="isa-preview">
+			<article><img src="http://mhimg1.mnsfz.com/pic/meihuo/2014-10-8/1/0025.jpg"></article>
+			<article><img src="http://mhimg1.mnsfz.com/pic/meihuo/2014-10-8/1/0025.jpg"></article>
+		</div>
+
+	</div>
+</body>
+</html>
