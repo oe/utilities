@@ -5,25 +5,26 @@ proxy = (fn)->
   document.body.appendChild script
 
 main = ->
-  iconPreview = document.querySelector '.icon-preview'
+  iconPreview = document.querySelector '.icon-workspace .download-icon'
   return unless iconPreview
 
   saveSVG = ->
-    svgWrapper = document.querySelector '.icon-preview__svg'
+    svgWrapper = document.querySelector '.icon.transparent-background>div'
     return unless svgWrapper
     text = encodeURIComponent svgWrapper.innerHTML
-    filename = document.querySelector('.icon-preview__title').textContent.trim() + '.svg'
+    filename = document.querySelector('.icon-workspace .title').textContent.trim() + '.svg'
     dom = document.createElement 'a'
     dom.setAttribute 'href', 'data:text/plain;charset=utf-8,' + text
     dom.setAttribute 'download', filename
     dom.click()
 
   btn = document.createElement 'div'
-  btn.className = 'b-bar-btns c-btn'
+  btn.className = 'button'
   btn.style.textAlign = 'center'
   btn.style.width = '100%'
   btn.style.backgroundColor = 'green'
   btn.style.borderColor = '#efeaea'
+  btn.style.marginTop = '10px'
   btn.textContent = 'Download SVG'
   btn.onclick = saveSVG
 
