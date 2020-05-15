@@ -8,3 +8,4 @@
 4. [抽奖](./lottery.js) JS代码片段. 针对最近爆出的微信抢红包金额有正态分布规律的问题, 在此使用简单的方法重写, 不存在正态分布规律
 5. [下载icons8 上的svg](./download-svn-icons8/download-svn-icon8.user.js) user script. 可使用改脚本免费从 icons8.com 上下载矢量的 svg 文件
 6. [Gitlab Pro](https://raw.githubusercontent.com/oe/utilities/master/gitlab-pro.user.js) gitlab功能增强插件, 目前可为issue的显示责任人人名字
+7. [Baidu Playback Speed](https://raw.githubusercontent.com/oe/utilities/master/yunpan-playback-rate.user.js) 为百度网盘视频播放器增加播放速度控制功能
