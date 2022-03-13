@@ -9,3 +9,7 @@
 5. [下载icons8 上的svg](./download-svn-icons8/download-svn-icon8.user.js) user script. 可使用改脚本免费从 icons8.com 上下载矢量的 svg 文件
 6. [Gitlab Pro](https://raw.githubusercontent.com/oe/utilities/master/gitlab-pro.user.js) gitlab功能增强插件, 目前可为issue的显示责任人人名字
 7. [Baidu Playback Speed](https://raw.githubusercontent.com/oe/utilities/master/yunpan-playback-rate.user.js) 为百度网盘视频播放器增加播放速度控制功能
+8. [北大法宝案例快速下载](https://raw.githubusercontent.com/oe/utilities/master/beida-laws.user.js)  北大法宝案例快速下载:
+   1. 搜索到案件后, 点击案件案号所在行, 可以直接下载案件的doc文件: 蓝色表示处理中, 绿色表示下载完成, 红色表示下载失败(会备注出失败原因)
+   2. 下载的文件使用 `[案号]案件名称.doc` 方式命名, 可修改浏览器的下载文件默认存放路径, 方便管理下载的案件
+   3. 在页面上 `s` 会自动定位到搜索框, 并选中搜索框的文字, 此时可直接粘贴新案号并按回车搜索, 提高效率
