@@ -15,11 +15,26 @@
 
 (function () {
   'use strict';
+  const CATE = location.pathname.split('/').pop()
+
+  const CATE_CONFIGS = {
+    // 案例
+    case: {library:  'pfnl', index: 2 },
+    // 法规
+    chl: { library: 'chl', index: 1},
+    // 期刊
+    qikan: { library: 'qikan', index: 0},
+    // 律所实务
+    lawfirmarticles: { library: 'lawfirmarticles', index: 1},
+  }
+
+  const CURRENT_CATE_CONFIG = CATE_CONFIGS[CATE]
+  if (!CURRENT_CATE_CONFIG) return
 
   function getFileContent(id) {
     let url = location.protocol + '//' + location.host + '/Tool/DownloadFulltext'
     const queryString = new URLSearchParams({
-      library: 'pfnl',
+      library: CURRENT_CATE_CONFIG.library,
       gid: id,
       type: 'Doc',
       flag: 'Doc',
@@ -49,7 +64,7 @@
     let fileName = row.querySelector('a').innerText.trim()
     let caseNoInfo = row.querySelector('.related-info').innerText.trim().split('/')
 
-    fileName = `[${caseNoInfo[caseNoInfo.length - 2]}]${fileName}`
+    fileName = `[${caseNoInfo[CURRENT_CATE_CONFIG.index]}]${fileName}`
     return downloadFile(fileName, id)
   }
 
