@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         beida laws
+// @name         北大法宝案例下载
 // @namespace    http://evecalm.com/
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        http://gfggi66f6a8ad06ba47d9skvvofo55pqbv6ubo.fbch.oca.swupl.edu.cn/case/*
+// @match        http://*.fbch.oca.swupl.edu.cn/case/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=swupl.edu.cn
 // @grant        none
 // ==/UserScript==
@@ -17,7 +17,7 @@
   'use strict';
 
   function getFileContent(id) {
-    let url = 'http://gfggi66f6a8ad06ba47d9skvvofo55pqbv6ubo.fbch.oca.swupl.edu.cn/Tool/DownloadFulltext'
+    let url = location.protocol + '//' + location.host + '/Tool/DownloadFulltext'
     const queryString = new URLSearchParams({
       library: 'pfnl',
       gid: id,
